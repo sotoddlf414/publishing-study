@@ -1,12 +1,16 @@
-.wrap {}
+.wrap { border:1px solid red; width:1200px; margin:auto;}
 
-header {}
-header article {}
-header article {}
+header {background: skyblue; overflow:hidden;}
+header article {width:200px; height:100px; background: rgb(98, 219, 98);}
+.logo{float:left;}
+.navi{float : right;}
 
-section.box1 {}
+section.box1 {background: rgb(235, 224, 80); height:300px;}
 
-section.box2 {}
-section.box2 article {}
+section.box2 {background: rgb(28, 124, 131); overflow: hidden;}
+section.box2 article {height:300px; width: 33.33%; background: rgb(172, 92, 92); float: left; }
+section.box2 article:first-child{background:blue;}
+section.box2 article:nth-child(2){background:red;}
+section.box2 article:nth-child(3){background:green;}
 
-footer {}
+footer {background: black; height:100px;}
