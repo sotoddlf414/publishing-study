@@ -1,14 +1,7 @@
-.container { width: 600px; height:600px; background: rgb(187, 183, 183); margin:0 auto; position: relative;}
+.menu{width:300px;}
+li{list-style: none; text-align: center; border: 1px solid black; }
+li > a{ font-size: 20px; width:100%; color:black; box-sizing: border-box;
+     padding:10px; display: inline-block; background: rgb(121, 118, 118); text-decoration: none;}
+.sub-menu{border:1px solid black; display:none;}    
+.sub-menu a{display: block; padding:10px;}
 
-.container div{height:100px; width:100px;  font-size: 35px; text-align: center; line-height: 100px; position: absolute;;}
-
-.box-1{ left:0; top:0;background: red;}
-.box-2{ right:0; top:0;background: red;}
-.box-3{ left:0; bottom:0;background: red;}
-.box-4{right:0; bottom:0;background: red;}
-.box-5{left:50%; top:50%; transform: translate(-50%, -50%);background: red;}
-
-.box-6{left:100%; top:0; background-color: rgb(128, 168, 66);}
-.box-7{left:100%; top:100%; background-color: rgb(128, 168, 66);}
-.box-8{left:0%; top:100%; background-color: rgb(128, 168, 66);}
-.box-9{right:100%; bottom:0; background-color: rgb(128, 168, 66);}
