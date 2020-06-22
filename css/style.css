@@ -1,97 +1,31 @@
-body,
-html {
-    background-color: rgb(37, 36, 36);
-}
-
-.squre {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-}
-
-.squre span {
-    position: absolute;
+.wrap {
+    position: relative;
+    background-color: rgb(104, 148, 230);
     width: 100%;
-    height: 100%;
-    border: 1px solid rgb(240, 236, 236);
-    border-radius: 45% 65% 55% 45%;
-    animation: rotation 6s linear infinite;
-    transition: 0.8s;
+    height: 100vh;
 }
 
-.squre span:nth-child(2) {
-    animation-duration: 5s;
-    animation-direction: reverse;
-}
-
-.squre span:nth-child(3) {
-    animation-duration: 3.0s;
-}
-
-.squre:hover span:first-child {
-    background-color: rgb(220, 20, 60);
-    border: none;
-    transition: 0.8s;
-    opacity: 0.8;
-}
-
-.squre:hover span:nth-child(2) {
-    background-color: rgb(220, 20, 60);
-    border: none;
-    transition: 0.8s;
-    opacity: 0.5;
-}
-
-.squre:hover span:nth-child(3) {
-    background-color: rgb(220, 20, 60);
-    border: none;
-    transition: 0.8s;
-    opacity: 0.2;
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.text {
+.gnb {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    transition: 0.8s;
-    color: #fff;
+    left: 20px;
+    top: 200px;
 }
 
-.text h2 {
-    font-size: 28px;
-    color: #fff;
-}
-
-.text a {
+.gnb a {
+    padding: 20px 20px 0px 20px;
+    display: block;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.8s;
-    color: #fff;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(240, 229, 229);
+    transition: 0.7s;
 }
 
-/* ---------------------------------------------------------------------------------- */
-.squre:nth-child(2) {
-    left: 25%;
-    top: 50%
+.gnb:hover a {
+    opacity: 0.2;
+    transition: 0.7s;
 }
 
-.squre:nth-child(3) {
-    left: 75%;
-    top: 50%
+.gnb a:hover {
+    opacity: 1;
 }
