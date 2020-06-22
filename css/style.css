@@ -1,11 +1,29 @@
 .wrap{position: relative;}
-.box{position: absolute; width:800px;  text-align: center;
-left:50%; top:50%; transform: translate(-50%,30%);}
-.box h2{ font-size: 32px;}
-.box h2 span{color:red;}
+.box{position: absolute; overflow: hidden; width:1100px; text-align: center; padding:10px; left:50%; top:50%; transform: translate(-50%,15%);}
+.box h2{font-size: 20px; color:red;}
+.box h3{font-size: 28px; position: relative; font-weight: 400;}
+.box h3 span.kakao:before{content:url(../img/jquery-attr/logo-kakao.png); position: absolute; left:195px; top:-30px;}
+.box h3 span.coding-works{font-size: 34px; font-weight: 900;}
 
-.box .picture-box img{width:130px; height:130px; cursor: pointer; filter:grayscale(1)}
-.box .picture-box img.active{border-radius: 50%; filter:grayscale(0)}
 
-.text-box{display:none; font-size: 22px; padding:15px;}
-.active{display:inline-block;}
+.box .text-box{width:48%; float:left; padding-left: 20px; margin-top: 20px;}
+.box .text-box h4{border: 1px solid rgba(182, 177, 177, 0.582); width:500px;margin: 0 auto; text-align: left; padding:10px 10px; box-sizing: border-box; margin-bottom: 20px; cursor: pointer; transition: 0.7s; position: relative;}
+
+.box .text-box h4:after{content:'>'; position: absolute; right:30px;
+font-size: 18px; top:8px;  transform: rotate(0deg);}
+
+.box .text-box h4:hover{background-color: rgb(54, 53, 53); color:#fff;
+transition: 0.7s;}
+.box .text-box h4:hover:after{ color:white; }
+
+.box .text-box h4.active{background-color: rgb(54, 53, 53); color:#fff;
+    }
+.box .text-box h4.active:after{transform:rotate(90deg); color:orange;}
+
+.box .text-box p{width:500px; 
+margin:0 auto; padding:0px 10px 10px 10px; box-sizing: border-box; text-align: left; display: none; line-height: 1.8em; font-size: 16px;}
+
+.box .text-box p:nth-of-type(1){display: block;}
+
+.box .img-box{width:48%; float: right; display: inline-block; padding-top:0px;}
+
