@@ -1,16 +1,13 @@
-.wrap{position: relative;  height:85vh;}
+.wrap{height: 100vh; width: 100%; position: relative;}
+.container{width:100px; height:100px;  left:50%; top:50%; position: absolute; transform: translate(-65%, -65%);}
+.container span{display: block; position: absolute; width:30px; height:30px; font-size: 0;}
+.container span:first-child{left:0; top:0; animation: moving 1.8s linear infinite;}
+.container span:nth-child(2){left:0; top:0; animation: moving 1.8s linear infinite; animation-delay: 0.9s;}
 
-.loading{position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
-.loading span{display:inline-block; width:150px; height:150px; background-color: grey; font-size: 0; margin-right: 25px; border-radius: 50%; animation: loading 1s linear infinite;}
-
-.loading span:nth-child(1){background:rgb(238, 94, 94); animation-delay: 0s;}
-
-.loading span:nth-child(2){background:rgb(182, 238, 130); animation-delay: 0.3s;}
-
-.loading span:nth-child(3){background:rgb(151, 138, 226); animation-delay: 0.6s;}
-
-@keyframes loading{
-     0% {opacity: 0; transform: scale(0.5);}
-     50% {opacity: 1; transform: scale(1.2);}
-     100% {opacity: 0; transform: scale(0.5); animation: name duration timing-function delay iteration-count direction fill-mode;}
+@keyframes moving{
+    0%{top:0; left:0; background-color: rgb(106, 106, 177);}
+    25%{top:0; left:100%; background-color: rgb(115, 206, 130);}
+    50%{top:100%; left:100%; background-color: rgb(212, 171, 108);}
+    75%{top:100%; left:0%; background-color: rgb(155, 46, 73);}
+    100%{top:0; left:0; background-color: rgb(209, 129, 75);}
 }
