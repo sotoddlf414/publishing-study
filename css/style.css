@@ -1,13 +1,97 @@
-.wrap{height: 100vh; width: 100%; position: relative;}
-.container{width:100px; height:100px;  left:50%; top:50%; position: absolute; transform: translate(-65%, -65%);}
-.container span{display: block; position: absolute; width:30px; height:30px; font-size: 0;}
-.container span:first-child{left:0; top:0; animation: moving 1.8s linear infinite;}
-.container span:nth-child(2){left:0; top:0; animation: moving 1.8s linear infinite; animation-delay: 0.9s;}
+body,
+html {
+    background-color: rgb(37, 36, 36);
+}
 
-@keyframes moving{
-    0%{top:0; left:0; background-color: rgb(106, 106, 177);}
-    25%{top:0; left:100%; background-color: rgb(115, 206, 130);}
-    50%{top:100%; left:100%; background-color: rgb(212, 171, 108);}
-    75%{top:100%; left:0%; background-color: rgb(155, 46, 73);}
-    100%{top:0; left:0; background-color: rgb(209, 129, 75);}
+.squre {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.squre span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(240, 236, 236);
+    border-radius: 45% 65% 55% 45%;
+    animation: rotation 6s linear infinite;
+    transition: 0.8s;
+}
+
+.squre span:nth-child(2) {
+    animation-duration: 5s;
+    animation-direction: reverse;
+}
+
+.squre span:nth-child(3) {
+    animation-duration: 3.0s;
+}
+
+.squre:hover span:first-child {
+    background-color: rgb(220, 20, 60);
+    border: none;
+    transition: 0.8s;
+    opacity: 0.8;
+}
+
+.squre:hover span:nth-child(2) {
+    background-color: rgb(220, 20, 60);
+    border: none;
+    transition: 0.8s;
+    opacity: 0.5;
+}
+
+.squre:hover span:nth-child(3) {
+    background-color: rgb(220, 20, 60);
+    border: none;
+    transition: 0.8s;
+    opacity: 0.2;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.8s;
+    color: #fff;
+}
+
+.text h2 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.text a {
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.8s;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.squre:nth-child(2) {
+    left: 25%;
+    top: 50%
+}
+
+.squre:nth-child(3) {
+    left: 75%;
+    top: 50%
 }
